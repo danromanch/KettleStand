@@ -1,8 +1,7 @@
-// This file is responsible for kettle control
 #include "common/struct.h"
 #include "driver/gpio.h"
 #include "esp_err.h"
-#include "pins.h"
+#include "common/pins.h"
 #include "log.h"
 #include <stdint.h>
 #include "sensors/temperature.h"

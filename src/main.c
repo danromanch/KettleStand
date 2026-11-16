@@ -7,5 +7,6 @@ void app_main(void)
 {
     ESP_ERROR_CHECK(storage_init());
     configPins();
+    configI2C();
     turnOnKettle();
 }
