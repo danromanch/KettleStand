@@ -1,1 +1,10 @@
 .pio
+.clangd
+CMakeLists.txt
+compile_commands.json
+sdkconfig*
+/test
+lib
+include
+.zed
+.cache
