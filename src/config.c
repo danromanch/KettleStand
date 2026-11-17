@@ -5,7 +5,7 @@
 #include "common/pins.h"
 #include "soc/clk_tree_defs.h"
 #include "stdbool.h"
-#include "log.h"
+#include "utils/log.h"
 
 #define I2C_FREQ_HZ 100000
 
@@ -19,10 +19,13 @@ void configPins(void)
         .intr_type = GPIO_INTR_DISABLE,
     };
     gpio_config(&rly_conf);
+
+    LOG("Pins configured");
 }
 
 void configWifi(void)
 {
+    
     
 }
 
@@ -56,6 +59,6 @@ void configI2C(void)
     };
     i2c_master_bus_add_device(s_bus_handle, &temp_cfg, &s_temp_dev);
 
-    logMessage("I2C initialized");
+    LOG("I2C initialized");
 }
 

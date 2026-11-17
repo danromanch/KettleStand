@@ -1,6 +1,5 @@
 #include <stdint.h>
-
-static float waterLevel = 0;
+static uint8_t waterLevel = 0;
 
 void updateWaterLevel(void)
 {

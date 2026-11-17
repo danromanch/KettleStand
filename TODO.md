@@ -10,7 +10,7 @@
 - add mqtt
 
 ## Sensors
-- setup both sensors in code when they arrive
+- setup both sensors in code when i buy them, and they arrive 
 
 ## RTOS
 - add rtos
@@ -18,6 +18,3 @@
 ## UI
 - add button interaction
 - add OLED display info (error also)
-
-## Logs
-- make logs

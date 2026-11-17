@@ -1,6 +1,7 @@
 #include "storage.h"
 #include <string.h>
 #include "esp_err.h"
+#include "utils/log.h"
 #include "nvs_flash.h"
 #include "nvs.h"
 #include "common/struct.h"
@@ -24,6 +25,7 @@ esp_err_t storage_init(void) {
     if (storage_load(STORAGE_NETWORK, &network, sizeof(network)) != ESP_OK) {
         ESP_ERROR_CHECK(storage_save(STORAGE_NETWORK, &network, sizeof(network)));
     }
+    LOG("Storage initialized");
     return ESP_OK;
 }
 
@@ -37,6 +39,7 @@ esp_err_t storage_save(const char *key, const void *data, size_t size) {
         err = nvs_commit(handle);
     }
     nvs_close(handle);
+    LOG("Data saved to storage in %s", key);
     return err;
 }
 
@@ -53,6 +56,6 @@ esp_err_t storage_load(const char *key, void *data, size_t size) {
     if (err != ESP_OK || actual_size != size) {
         return ESP_ERR_NVS_NOT_FOUND;
     }
-
+    LOG("Data loaded from %s in storage", key);
     return ESP_OK;
 }

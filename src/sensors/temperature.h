@@ -1,5 +1,4 @@
 #pragma once
-#include <stdint.h>
 
-uint8_t getTemperature(void);
+float getTemperature(void);
 void updateTemperature(void);

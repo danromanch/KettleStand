@@ -1,15 +1,13 @@
-#include <stdint.h>
-
-static float temperature = 0;
+static float temperature = 0.0f;
 
 void updateTemperature(void)
 {
-   //TODO implement update
-   temperature = 99;
+   // TODO implement update
+   temperature = 100.0f;
    return; 
 }
 
-uint8_t getTemperature(void)
+float getTemperature(void)
 {
     return temperature; 
 }
