@@ -16,3 +16,7 @@ typedef struct {
     char password[32];
 } block_network_t;
 
+typedef struct {
+    float temperature;
+    uint8_t waterLevel;
+} state_sensor_t;

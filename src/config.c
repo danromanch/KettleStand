@@ -2,7 +2,7 @@
 #include "driver/i2c_master.h"
 #include "hal/gpio_types.h"
 #include "hal/i2c_types.h"
-#include "common/pins.h"
+#include "lib/common/pins.h"
 #include "soc/clk_tree_defs.h"
 #include "stdbool.h"
 #include "utils/log.h"
