@@ -1,6 +1,4 @@
-#include "driver/gpio.h"
 #include "driver/i2c_master.h"
-#include "hal/gpio_types.h"
 #include "hal/i2c_types.h"
 #include "lib/common/pins.h"
 #include "soc/clk_tree_defs.h"
@@ -8,26 +6,6 @@
 #include "utils/log.h"
 
 #define I2C_FREQ_HZ 100000
-
-void configPins(void)
-{
-    gpio_config_t rly_conf = {
-        .pin_bit_mask = (1ULL << RLY_PIN),
-        .mode = GPIO_MODE_OUTPUT,
-        .pull_up_en = GPIO_PULLUP_DISABLE,
-        .pull_down_en = GPIO_PULLDOWN_DISABLE,
-        .intr_type = GPIO_INTR_DISABLE,
-    };
-    gpio_config(&rly_conf);
-
-    LOG("Pins configured");
-}
-
-void configWifi(void)
-{
-    
-    
-}
 
 static i2c_master_bus_handle_t s_bus_handle = NULL;
 static i2c_master_dev_handle_t s_oled_dev = NULL;
@@ -61,4 +39,3 @@ void configI2C(void)
 
     LOG("I2C initialized");
 }
-

@@ -16,5 +16,4 @@
 - add rtos
 
 ## UI
-- add button interaction
 - add OLED display info (error also)
